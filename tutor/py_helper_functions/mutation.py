@@ -12,9 +12,6 @@ def mutate(activity_string):
     """function mutate This function changes a random mixture of the letters, numbers, and symbols in the exercise
     Args:
          activity_string (string): string of activity to be mutated
-         letters (2D array): array of groups of letters to use in exercise
-         variable_key (dict): maps the original variables with the new ones
-         inverse_variable_key (dict): maps the new variables to the old ones
     Returns:
         String: A string of the mutated activity
     """
@@ -115,8 +112,7 @@ def mutate_symbols():
     """function mutate_symbols This function stores various symbols and their opposite symbol in the variable and inverse
         variable keys, not currently used in mutate
     Args:
-         variable_key (dict): maps the original variables with the new ones
-         inverse_variable_key (dict): maps the new variables to the old ones
+        NULL
     Returns:
         NULL
     """
@@ -135,7 +131,6 @@ def reverse_mutate(activity_string):
             its original form
     Args:
         activity_string (string): string of activity to be mutated
-        inverse_variable_key (dict): maps the new variables to the old ones
     Returns:
         NULL
         """
@@ -161,7 +156,7 @@ def can_mutate(current_lesson):
     # check if can mutate
     mutated_code = current_lesson.code.lesson_code
     if current_lesson.can_mutate:
-        mutated_code = mutate(current_lesson.code.lesson_code)
+        mutated_code = mutate(mutated_code)
     return mutated_code
 
 

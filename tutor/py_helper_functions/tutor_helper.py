@@ -109,6 +109,7 @@ def not_complete(request):
             return True
     return False
 
+
 def alternate_lesson_check(current_lesson, type):
     """function set_not_complete This function handles the logic for a if a set has not been completed
 
@@ -132,7 +133,6 @@ def alternate_lesson_check(current_lesson, type):
         return Lesson.objects.get(lesson_name=dict[type])
 
     return current_lesson
-
 
 
 def check_type(current_lesson, submitted_answer, status):
